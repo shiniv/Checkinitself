@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>虾米自动签到</title>
+<meta http-equiv="Content-Type" content="text/html; UTF-8" charset="UTF-8">
+<meta http-equiv="content-type" content="application/xhtml">
+<meta name="description" content="虾米自动签到"> 
+<meta name="keyword" content="虾米,自动签到,应用铺子"> 
+<link href="reg.css" rel="stylesheet" media="screen" type="text/css">
+<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <h1>虾米自动签到</h1>
+  </div>
+  <div class="content">
+    <div class="clear"></div>
+    <form id="usereg" action="/" method="POST" name="form">
+      <p>
+      <label class="label_e">邮箱：</label>
+        <input id="email" class="input" size="20" name="email" value="" placeholder="">
+      </p>
+      <p>
+        <label class="label_p">密码：(密码这种东西当然不会泄露)</label>
+        <input id="password" class="input" value="" size="20" name="password" type="password">
+      </p>
+	  <p><input type="checkbox" value="1" name="remember" checked="">记住登录状态，不要取消</p>
+      <p id="submit">
+        <input class="m_submit" type="submit" value="登录" name="LoginButton">
+      </p>
+    </form>
+  </div>
+  <div class="footer">
+  	<p>没有帐号?<a href="http://www.xiami.com/member/register" target="_blank">这里注册</a></p>
+    <p>使用cookie保存虾米登录状态</p>
+	<p>暂不保存密码(意见征求)</p>
+    <p>若用户更改虾米密码，请重新登记</p>
+    <p>取消绑定，联系我<a href="http://gplus.to/tangwei" target="_blank">G+</a>／<a href="http://weibo.com/napaj">微博</a></p>
+    <p>原作者：<a href="http://isombyt.me/2012/05/xiami-checkin/" target="_blank">isombyt</a></p>
+    <p>源码地址：<a href="https://github.com/isombyt/xiamiCheckin" target="_blank">github</a></p>
+    <p><a href="https://plus.google.com/106656535974357593071/posts?hl=en" target="_blank">淫笑同学</a>的背景图真的好二啊－ －</p>
+    <p>由Google App Engine提供基础支持</p>
+	<p><a href="http://app.wepost.me/">应用铺子</a></p>
+  </div>
+</div>
+<script>
+  $("form").submit(function () {
+    if ($("#username").val() == "" || $("#password").val() == "") {
+      $(this).css("position", "relative").animate({
+        left: "-=20px"
+      }, 30).animate({
+        left: "+=20px"
+      }, 60).animate({
+        left: "-=10px"
+      }, 60).animate({
+        left: "+=10px"
+      }, 60).animate({
+        left: "-=5px"
+      }, 60).animate({
+        left: 0
+      }, 30);
+      return false;
+    };
+  });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-41269946-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</div>
+</body>
+</html>

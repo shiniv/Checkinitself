@@ -16,11 +16,11 @@ def get_info(email,password):
     #login
     login_url = 'http://www.xiami.com/web/login'
     login_data = urllib.urlencode({'email':email, 
-										'password':password, 
-										'LoginButton':'\xe7\x99\xbb\xe9\x99\x86',
-										'remember':1,
-										})
-    login_headers = {'Referer':'http://www.xiami.com/web/login', 'User-Agent':'Opera/9.60',}
+				'password':password,
+				'remember':1,
+                                'LoginButton':'\xe7\x99\xbb\xe5\xbd\x95',
+})
+    login_headers = {'Referer':'http://www.xiami.com/web/login', 'User-Agent':'Mozilla/5.0',}
     login_request = urllib2.Request(login_url, login_data, login_headers)
     #login_url='http://www.xiami.com/web'
     #login_request = urllib2.Request(login_url)
